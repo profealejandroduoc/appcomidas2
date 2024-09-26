@@ -1,0 +1,7 @@
+{
+  "name": "appcomidas2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
