@@ -10,9 +10,18 @@
 <ion-text color="secondary" class="ion-text-center">
   <h1>Categorías</h1>
 </ion-text>
- <ion-list>
-  <ion-item *ngFor="let cat of listaCategorias" >
-    <ion-label>Categoria</ion-label>
-  </ion-item>
- </ion-list>
+
+    <ion-card *ngFor="let cat of listaCategorias" >
+      <ion-card-title class="ion-padding" color="tertiary"><h1>{{cat.strCategory}}</h1></ion-card-title>
+      <img alt="imagen" src="{{cat.strCategoryThumb}}" />
+      <ion-card-header>
+        
+        <ion-card-subtitle>ID:{{cat.idCategory}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{cat.strCategoryDescription}}
+      </ion-card-content>
+    </ion-card>
+
 </ion-content>

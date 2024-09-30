@@ -13,4 +13,8 @@ export class DataserviceService {
   getCategorias(){
     return this.httpclient.get<Categorias>(`https://www.themealdb.com/api/json/v1/1/categories.php`);
   }
+
+  getComidasxCategoria(){
+    return this.httpclient.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=beef`);
+  }
 }
