@@ -9,3 +9,13 @@ export interface Categoria {
   strCategoryThumb: string;
   strCategoryDescription: string;
 }
+
+export interface Comidas {
+  meals: Comida[];
+}
+
+export interface Comida {
+  strMeal: string;
+  strMealThumb: string;
+  idMeal: string;
+}

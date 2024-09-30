@@ -11,7 +11,7 @@
   <h1>Categorías</h1>
 </ion-text>
 
-    <ion-card *ngFor="let cat of listaCategorias" >
+    <ion-card  (click)="verComida(cat.strCategory)" *ngFor="let cat of listaCategorias">
       <ion-card-title class="ion-padding" color="tertiary"><h1>{{cat.strCategory}}</h1></ion-card-title>
       <img alt="imagen" src="{{cat.strCategoryThumb}}" />
       <ion-card-header>

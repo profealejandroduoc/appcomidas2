@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'comidas',
+    loadChildren: () => import('./pages/comidas/comidas.module').then( m => m.ComidasPageModule)
   },
+
 ];
 
 @NgModule({
