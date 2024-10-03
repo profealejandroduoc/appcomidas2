@@ -3,10 +3,25 @@
   <ion-buttons slot="start">
     <ion-back-button color="light" defaultHref="/home" mode="ios" text="Atrás"></ion-back-button>
   </ion-buttons>
-  <ion-title color="light">Comidas</ion-title>
+  <ion-title color="light">{{titulo}}</ion-title>
 </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let food of listaComidas" >
+    <img alt="imagen comida" src="{{food.strMealThumb}}" />
+    <ion-card-header>
+      <ion-card-title color="secondary" class="ion-text-capitalize">{{food.strMeal}}</ion-card-title>
+      <ion-card-subtitle >ID:{{food.idMeal}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button (click)="verReceta(food.idMeal)" expand="block" color="primary" >
+        <ion-text color="light">
+          <h4>Ver Receta</h4>
+        </ion-text>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

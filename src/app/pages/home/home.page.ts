@@ -34,7 +34,8 @@ export class HomePage implements OnInit {
   verComida(tipo:string){
     let xtr:NavigationExtras={
       state:{
-        tipo_categoria:tipo
+        tipo_categoria:tipo,
+      
       }
     }
 
