@@ -20,7 +20,7 @@ export interface Comida {
   idMeal: string;
 }
 
-interface Recetas {
+export interface Recetas {
   meals: Receta[];
 }
 

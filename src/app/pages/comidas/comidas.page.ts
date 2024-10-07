@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { Comida } from 'src/app/interfaces/icomidas';
 import { DataserviceService } from 'src/app/services/dataservice.service';
 
@@ -34,7 +34,13 @@ export class ComidasPage implements OnInit {
   }
 
   verReceta(id:string){
-    console.log(id);
+    
+    let x:NavigationExtras={
+      state:{
+        id_rec:id
+      }
+    }
+    this.router.navigate(['receta/'],x);
   }
 
 
