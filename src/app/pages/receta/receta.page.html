@@ -3,11 +3,35 @@
     <ion-buttons slot="start">
       <ion-back-button color="light" defaultHref="/home" mode="ios" text="Atrás"></ion-back-button>
     </ion-buttons>
-    <ion-title color="light">App Comidas</ion-title>
+    <ion-title color="light">Instrucciones</ion-title>
   </ion-toolbar>
   </ion-header>
   
   <ion-content class="ion-padding">
- 
+    <ion-card *ngFor="let item of listaReceta" >
+      <img alt="imagen" src="{{item.strMealThumb}}" />
+      <ion-card-header>
+        <ion-card-title color="secondary" class="ion-text-capitalize">{{item.strMeal}}</ion-card-title>
+        <ion-card-subtitle>{{item.idMeal}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.strInstructions}}
+      </ion-card-content>
+    </ion-card>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-icon name="chevron-up-circle" color="light"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button>
+          <ion-icon name="share-social"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-fab-button>
+       
+      </ion-fab-list>
+    </ion-fab>
   </ion-content>
   

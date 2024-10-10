@@ -10,7 +10,7 @@ import { Receta } from '../../interfaces/icomidas';
 })
 export class RecetaPage implements OnInit {
 
-  titulo = ""
+
   listaReceta: Receta[] = [];
   constructor(private router: Router, private srv: DataserviceService) { }
 
@@ -24,7 +24,7 @@ export class RecetaPage implements OnInit {
       this.srv.getReceta(x["id_rec"]).subscribe(datos=>{
         console.log(datos);
         this.listaReceta.push(...datos.meals);
-        this.titulo=this.listaReceta[0].strMeal;
+        //this.titulo=this.listaReceta[0].strMeal;
       })
     }
   }
