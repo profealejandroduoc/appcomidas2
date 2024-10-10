@@ -13,6 +13,8 @@ export class RecetaPage implements OnInit {
 
   id_comida:string="";
 
+  iconofav="heart-outline";
+
   listaReceta: Receta[] = [];
   constructor(private router: Router, 
     private srv: DataserviceService,
@@ -30,12 +32,30 @@ export class RecetaPage implements OnInit {
         console.log(datos);
         this.listaReceta.push(...datos.meals);
         this.id_comida=this.listaReceta[0].idMeal;
+        this.buscarFav(this.id_comida);
       })
     }
+    console.log("INICIO ON INIT");
+    console.log(this.id_comida);
+    this.buscarFav(this.id_comida);
+    console.log("FIN ON INIT");
   }
 
   favoritos(){
     console.log(this.id_comida);
-    this.db.guardar(this.id_comida,"Holdffsfdsa");
+    this.db.guardar(this.id_comida,this.listaReceta[0]);
+    this.iconofav="heart"
+  }
+
+  buscarFav(id:string){
+   let valor=this.db.obtener(id);
+   //Solo para mostrar en consola
+   valor.then(datos=>{
+    console.log(datos);
+    if(datos!==null){
+      this.iconofav="heart"
+    }
+
+   })
   }
 }

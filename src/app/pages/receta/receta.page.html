@@ -9,6 +9,7 @@
   
   <ion-content class="ion-padding">
    
+   
     <ion-card *ngFor="let item of listaReceta" >
       <img alt="imagen" src="{{item.strMealThumb}}" />
       <ion-card-header>
@@ -29,10 +30,11 @@
           <ion-icon name="share-social"></ion-icon>
         </ion-fab-button>
         <ion-fab-button>
-          <ion-icon name="heart-outline" (click)="favoritos()"></ion-icon>
+          <ion-icon name="{{iconofav}}" (click)="favoritos()" color="danger"></ion-icon>
         </ion-fab-button>
        
       </ion-fab-list>
     </ion-fab>
+    
   </ion-content>
   
