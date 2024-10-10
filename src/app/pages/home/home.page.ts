@@ -42,14 +42,6 @@ export class HomePage implements OnInit {
     this.router.navigate(['comidas/'],xtr);
   }
 
-  /*verComida(tipo:string){
-    this.dataService.getComidasxCategoria(tipo).subscribe(datos=>{
-      console.log(datos);
-      this.router.navigate(['/comidas']);
-
-    })
-  }
-*/
 
 
 
