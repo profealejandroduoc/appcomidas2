@@ -12,22 +12,22 @@
 </ion-text>
 <form #registroForm="ngForm" (ngSubmit)="registrar()">
   <ion-item>
-    <ion-input required labelPlacement="floating" label="Usuario" name="text" type="text"></ion-input>
+    <ion-input required labelPlacement="floating" label="Usuario" name="text" type="text" [(ngModel)]="usr.username" ></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input required labelPlacement="floating" label="Contraseña" name="password" type="password">
-      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+    <ion-input required labelPlacement="floating" label="Contraseña" name="password" type="password" [(ngModel)]="usr.password" >
+      <!-- <ion-input-password-toggle slot="end"></ion-input-password-toggle> -->
     </ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input required labelPlacement="floating" label="Nombre" name="password" type="text">
+    <ion-input required labelPlacement="floating" label="Nombre" name="password" type="text" [(ngModel)]="usr.nombre" >
     </ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input required labelPlacement="floating" label="Apellido" name="apellido" type="text">
+    <ion-input required labelPlacement="floating" label="Apellido" name="apellido" type="text" [(ngModel)]="usr.apellido" >
     </ion-input>
   </ion-item>
 
