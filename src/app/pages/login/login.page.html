@@ -12,10 +12,10 @@
 </ion-text>
 <form #loginForm="ngForm" (ngSubmit)="logear()">
   <ion-item>
-    <ion-input required labelPlacement="floating" label="Usuario" name="text" type="text"></ion-input>
+    <ion-input required labelPlacement="floating" label="Usuario" name="text" type="text" [(ngModel)]="usr.username" ></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input required labelPlacement="floating" label="Contraseña" name="password" type="password">
+    <ion-input required labelPlacement="floating" label="Contraseña" name="password" type="password" [(ngModel)]="usr.password" >
       <ion-input-password-toggle slot="end"></ion-input-password-toggle>
     </ion-input>
   </ion-item>
