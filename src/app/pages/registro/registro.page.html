@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home" mode="ios" text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-text color="secondary" class="ion-text-center">
+    <h1>Registro de Usuario</h1>
+  </ion-text>
+  <form #regForm="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-input required type="text" label="Usuario" labelPlacement="floating" placeholder="nombre de usuario" name="usuario" [(ngModel)]="usuario.username" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="password" label="Password" labelPlacement="floating" placeholder="Contraseña" name="usuario" [(ngModel)]="usuario.password" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" label="Nombre" labelPlacement="floating" placeholder="Ingrese su nombre" name="usuario" [(ngModel)]="usuario.nombre" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" label="Apellido" labelPlacement="floating" placeholder="Ingrese su apellido" name="usuario" [(ngModel)]="usuario.apellido" ></ion-input>
+    </ion-item>
+
+
+    <ion-button expand="full" type="submit" [disabled]="regForm.invalid" color="success" class="ion-padding-top">
+      <ion-text color="light">
+        Registrarse
+      </ion-text>
+    </ion-button>
+
+
+  </form>
+</ion-content>

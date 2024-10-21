@@ -8,15 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'comidas',
     loadChildren: () => import('./pages/comidas/comidas.module').then( m => m.ComidasPageModule)
   },
   {
     path: 'receta',
     loadChildren: () => import('./pages/receta/receta.module').then( m => m.RecetaPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
 
 ];
