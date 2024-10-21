@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
+<<<<<<< HEAD
     <ion-buttons slot="start">
       <ion-back-button color="light" defaultHref="/home" mode="ios" text="Atrás"></ion-back-button>
     </ion-buttons>
@@ -36,3 +37,51 @@
 
   </form>
 </ion-content>
+=======
+    <ion-title color="light" class="ion-text-center">
+      MealDB App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" >
+<ion-text color="secondary" class="ion-text-center" >
+  <h1>Registro de Usuario</h1>
+</ion-text>
+<form #registroForm="ngForm" (ngSubmit)="registrar()">
+  <ion-item>
+    <ion-input required labelPlacement="floating" label="Usuario" name="text" type="text" [(ngModel)]="usr.username" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input required labelPlacement="floating" label="Contraseña" name="password" type="password" [(ngModel)]="usr.password" >
+      <!-- <ion-input-password-toggle slot="end"></ion-input-password-toggle> -->
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input required labelPlacement="floating" label="Nombre" name="password" type="text" [(ngModel)]="usr.nombre" >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input required labelPlacement="floating" label="Apellido" name="apellido" type="text" [(ngModel)]="usr.apellido" >
+    </ion-input>
+  </ion-item>
+
+  <ion-button expand="full" color="primary" type="submit" [disabled]="registroForm.invalid" class="ion-padding">
+    <ion-text color="light">
+      Registrarse
+    </ion-text>
+  </ion-button>
+</form>
+
+<ion-text color="tertiary" class="ion-text-center" routerLink="/login">
+  <p>Volver a login</p>
+</ion-text>
+
+
+
+</ion-content>
+
+>>>>>>> 197795b97e903da8c88648c037af63b8b2f09a53

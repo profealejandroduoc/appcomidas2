@@ -55,6 +55,9 @@ export class RecetaPage implements OnInit {
     if(datos!==null){
       this.iconofav="heart"
     }
+    else{
+      this.iconofav='heart-outline';
+    }
 
    })
   }
