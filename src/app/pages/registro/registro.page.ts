@@ -1,14 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { usuario } from '../../interfaces/iusuario';
-import { LocaldbService } from 'src/app/services/localdb.service';
-import { Router } from '@angular/router';
-=======
 import { Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 import { Usuario } from 'src/app/interfaces/iusuario';
 import { LocaldbService } from 'src/app/services/localdb.service';
->>>>>>> 197795b97e903da8c88648c037af63b8b2f09a53
 
 @Component({
   selector: 'app-registro',
@@ -17,15 +11,6 @@ import { LocaldbService } from 'src/app/services/localdb.service';
 })
 export class RegistroPage implements OnInit {
 
-<<<<<<< HEAD
-  usuario:usuario={
-    username:'',
-    password:'',
-    nombre:'',
-    apellido:''
-  }
-  constructor(private db:LocaldbService, private router:Router) { }
-=======
 
   usr: Usuario = {
     username: '',
@@ -37,17 +22,10 @@ export class RegistroPage implements OnInit {
     private toastController: ToastController,
     private alertController: AlertController,
     private router: Router) { }
->>>>>>> 197795b97e903da8c88648c037af63b8b2f09a53
 
   ngOnInit() {
   }
 
-<<<<<<< HEAD
-  onSubmit(){
-
-    this.db.guardar(this.usuario.username, this.usuario);
-    this.router.navigate(['login/']);
-=======
   async presentToast(position: 'top' | 'middle' | 'bottom') {
     const toast = await this.toastController.create({
       message: 'El usuario ya existe',
@@ -92,6 +70,5 @@ export class RegistroPage implements OnInit {
     });
 
     await alert.present();
->>>>>>> 197795b97e903da8c88648c037af63b8b2f09a53
   }
 }
