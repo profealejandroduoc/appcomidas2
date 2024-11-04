@@ -10,8 +10,10 @@ import { DataserviceService } from 'src/app/services/dataservice.service';
 })
 export class ComidasPage implements OnInit {
 
+  loaded=false;
   titulo:string=""
   listaComidas:Comida[]=[];
+
 
   constructor(private router:Router,private dataService:DataserviceService) { }
 
@@ -21,6 +23,7 @@ export class ComidasPage implements OnInit {
       console.log(datosextras["tipo_categoria"]);
       this.titulo=datosextras["tipo_categoria"];
       this.cargarComidas(datosextras["tipo_categoria"]);
+      
     }
   }
 
@@ -28,6 +31,7 @@ export class ComidasPage implements OnInit {
     this.dataService.getComidasxCategoria(tipo).subscribe(datos=>{
       console.log(datos);
       this.listaComidas.push(...datos.meals);
+      this.loaded=true;
 
 
     })
