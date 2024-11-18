@@ -14,3 +14,7 @@ Luego abrir en android estudio última versión
 luego
 
 `ionic cap sync`
+
+
+# Release
+Version 1.0.0
